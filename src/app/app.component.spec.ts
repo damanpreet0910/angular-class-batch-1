@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'mean-stack-batch1'`, () => {
+  it(`should have as title 'practice-project'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('mean-stack-batch1');
+    expect(app.title).toEqual('practice-project');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('mean-stack-batch1 app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('practice-project app is running!');
   });
 });
