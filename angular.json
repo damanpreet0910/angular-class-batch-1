@@ -29,9 +29,7 @@
             "styles": [
               "src/styles.css",
               "src/assets/vendor/fontawesome-free/css/all.min.css",
-              "src/assets/css/sb-admin-2.min.css",
-              "node_modules/ngx-toastr/toastr.css",
-              "node_modules/ngx-spinner/animations/ball-scale-multiple.css"
+              "src/assets/css/sb-admin-2.min.css"
             ],
             "scripts": [
               "src/assets/vendor/jquery/jquery.min.js",
@@ -108,9 +106,7 @@
             "styles": [
               "src/styles.css",
               "src/assets/vendor/fontawesome-free/css/all.min.css",
-              "src/assets/css/sb-admin-2.min.css",
-              "node_modules/ngx-toastr/toastr.css",
-              "node_modules/ngx-spinner/animations/ball-scale-multiple.css"
+              "src/assets/css/sb-admin-2.min.css"
             ],
             "scripts": [
               "src/assets/vendor/jquery/jquery.min.js",

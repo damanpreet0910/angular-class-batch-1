@@ -18,6 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { HttpClientModule } from "@angular/common/http";
+import { AdduserComponent } from './user/adduser/adduser.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     SidebarComponent,
     ButtonComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AdduserComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
     NgxSpinnerModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
+import { AdduserComponent } from './user/adduser/adduser.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/login',pathMatch:'full'},
@@ -17,7 +18,8 @@ const routes: Routes = [
       // {path:"about",component:AboutComponent},
       // {path:"contact",component:ContactComponent}
       {path:'dashboard',component:DashboardComponent},
-      {path:'button',component:ButtonComponent}
+      {path:'button',component:ButtonComponent},
+      {path:"adduser",component:AdduserComponent}
     ]
   },
   {

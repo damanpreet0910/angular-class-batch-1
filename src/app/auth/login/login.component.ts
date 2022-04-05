@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/shared/auth/auth.service';
+import { LoginService } from 'src/app/shared/auth/login.service';
 
 @Component({
   selector: 'app-login',
@@ -17,29 +18,40 @@ export class LoginComponent implements OnInit {
     password: new FormControl('')
   })
 
-  constructor(private router : Router, private auth : AuthService,private toastr : ToastrService,private spinner : NgxSpinnerService) { }
+  constructor(private router : Router, private auth : AuthService,private toastr : ToastrService,private spinner : NgxSpinnerService, private login : LoginService) { }
 
   ngOnInit(): void {
     if(this.auth.getEmail() != null)
     {
       this.router.navigateByUrl('/layout/dashboard')
     }
+    // this.spinner.show();
+
+    // setTimeout(() => {
+    //   /** spinner ends after 5 seconds */
+    //   this.spinner.hide();
+    // }, 5000);
   }
   submit(){
     this.spinner.show()
-    // alert("HELLO");
-      // console.log(this.loginForm.value.email)
-      if(this.loginForm.value.email=="daman@gmail.com" && this.loginForm.value.password=="123456")
-      {
+    this.login.login(this.loginForm.value).subscribe(
+      (res:any)=>{
         this.spinner.hide()
-        this.toastr.show('success','login successfully')
-        this.auth.setItem(this.loginForm.value.email)
-        this.router.navigateByUrl('/layout/dashboard')
-      }
-      else{
+        // console.log("if stmt work" +res)
+        if(res.response.status)
+        {
+          this.auth.setItem(res.response)
+          this.toastr.success('Login Successfully','success')
+          this.router.navigateByUrl("/layout/dashboard")
+        }else{
+          this.toastr.error('Error!',res.response.msg)
+        }
+      },
+      err=>{
         this.spinner.hide()
-        this.toastr.show("error","Invalid email or password")
+        // console.log("else statement works" + err)
       }
+    )
   }
 
 }
