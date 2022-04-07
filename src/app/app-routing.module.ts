@@ -9,6 +9,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AdduserComponent } from './user/adduser/adduser.component';
+import { ListuserComponent } from './user/listuser/listuser.component';
+import { SingleuserComponent } from './user/singleuser/singleuser.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/login',pathMatch:'full'},
@@ -19,7 +21,9 @@ const routes: Routes = [
       // {path:"contact",component:ContactComponent}
       {path:'dashboard',component:DashboardComponent},
       {path:'button',component:ButtonComponent},
-      {path:"adduser",component:AdduserComponent}
+      {path:"adduser",component:AdduserComponent},
+      {path:"listuser",component:ListuserComponent},
+      {path:"singleuser/:id",component:SingleuserComponent},
     ]
   },
   {

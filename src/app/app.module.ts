@@ -20,6 +20,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { HttpClientModule } from "@angular/common/http";
 import { AdduserComponent } from './user/adduser/adduser.component';
+import { ListuserComponent } from './user/listuser/listuser.component';
+import { SingleuserComponent } from './user/singleuser/singleuser.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { AdduserComponent } from './user/adduser/adduser.component';
     ButtonComponent,
     LoginComponent,
     RegisterComponent,
-    AdduserComponent
+    AdduserComponent,
+    ListuserComponent,
+    SingleuserComponent
   ],
   imports: [
     BrowserModule,
