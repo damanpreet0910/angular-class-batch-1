@@ -28,6 +28,7 @@
               <th>EMAIL</th>
               <th>VIEW</th>
               <th>DELETE</th>
+              <th>Edit</th>
             </tr>
             <tr *ngFor="let data of alluser">
               <td>{{ data['id'] }}</td>
@@ -39,6 +40,9 @@
               <td>
                  <i class="fa fa-trash text-danger" (click)="delete(data['id'])"></i>
               </td>
+              <td>
+                <a [routerLink]="['/layout/edituser',data['id']]"><i class="fa fa-edit"></i></a>
+             </td>
             </tr>
           </table>
         </div>

@@ -34,4 +34,9 @@ export class UserService {
     return this.http.delete(this.baseurl + "/deleteStudent/" + id, { headers: header_object });
   }
 
+  updateuser(id: any,form:any) {
+    var header_object = new HttpHeaders().set('Authorization', 'Bearer ' + this.token);
+    return this.http.post(this.baseurl + "/updateStudent/" + id,form, { headers: header_object });
+  }
+
 }

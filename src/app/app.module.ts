@@ -22,6 +22,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AdduserComponent } from './user/adduser/adduser.component';
 import { ListuserComponent } from './user/listuser/listuser.component';
 import { SingleuserComponent } from './user/singleuser/singleuser.component';
+import { EdituserComponent } from './user/edituser/edituser.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { SingleuserComponent } from './user/singleuser/singleuser.component';
     RegisterComponent,
     AdduserComponent,
     ListuserComponent,
-    SingleuserComponent
+    SingleuserComponent,
+    EdituserComponent
   ],
   imports: [
     BrowserModule,

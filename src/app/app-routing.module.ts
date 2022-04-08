@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AdduserComponent } from './user/adduser/adduser.component';
+import { EdituserComponent } from './user/edituser/edituser.component';
 import { ListuserComponent } from './user/listuser/listuser.component';
 import { SingleuserComponent } from './user/singleuser/singleuser.component';
 
@@ -24,6 +25,7 @@ const routes: Routes = [
       {path:"adduser",component:AdduserComponent},
       {path:"listuser",component:ListuserComponent},
       {path:"singleuser/:id",component:SingleuserComponent},
+      {path:"edituser/:id",component:EdituserComponent},
     ]
   },
   {
